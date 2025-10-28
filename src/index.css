@@ -28,16 +28,16 @@ body {
 
 .search-form {
   display: flex;
-  justify-content: center; /* centers it horizontally */
+  justify-content: center;
   align-items: center;
   gap: 10px;
-  margin: 40px auto; /* gives space from top and centers inside container */
+  margin: 40px auto;
   width: 100%;
-  max-width: 600px; /* controls how wide it can get on large screens */
+  max-width: 600px;
 }
 
 .search-form input {
-  flex: 1; /* makes it expand to fill space */
+  flex: 1;
   border-radius: 25px;
   padding: 15px 20px;
   border: 2px solid blue;
@@ -94,26 +94,40 @@ body {
   font-size: inherit;
 }
 
-.hourly-weather {
+.weather-city {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+.weather-description {
+  text-transform: capitalize;
+  color: #555;
+  font-size: 1.2rem;
+}
+
+.weather-details {
+  margin-top: 15px;
+  text-align: center;
+  color: #444;
+  font-size: 1rem;
   display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid lightgray;
-  overflow-x: auto;
-  scrollbar-width: thin;
-  scrollbar-color: transparent transparent;
-  gap: 20px;
-  border-top: 1px solid;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.hourly-image {
-  width: 50px;
-  height: 50px;
+.unit-toggle {
+  margin-top: 15px;
+  background-color: rgba(51, 125, 254, 0.833);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.hourly-description {
-  font-size: small;
-  color: gray;
-  margin-top: 5px;
+.unit-toggle:hover {
+  background-color: rgba(40, 110, 230, 0.9);
 }
