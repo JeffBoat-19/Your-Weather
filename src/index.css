@@ -155,26 +155,29 @@ body {
 }
 
 @media (max-width: 480px) {
-}
-.weather-temperature {
-  font-size: 35px;
-}
+  .current-weather {
+    margin-top: 60px;
+  }
+  .weather-temperature {
+    font-size: 35px;
+  }
 
-.weather-icon {
-  width: 100px;
-  height: 100px;
-}
+  .weather-icon {
+    width: 100px;
+    height: 100px;
+  }
 
-.weather-city {
-  font-size: 1.1rem;
-}
+  .weather-city {
+    font-size: 1.1rem;
+  }
 
-.weather-description {
-  font-size: 1rem;
-}
+  .weather-description {
+    font-size: 1rem;
+  }
 
-.current-weather {
-  animation: fadeIn 0.8s ease-in-out;
+  .current-weather {
+    animation: fadeIn 0.8s ease-in-out;
+  }
 }
 
 @keyframes fadeIn {
