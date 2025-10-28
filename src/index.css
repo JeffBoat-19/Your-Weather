@@ -7,20 +7,18 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: rgba(51, 125, 254, 0.833);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0;
+  padding: 0;
 }
-
 .container {
   background-color: #fff;
-  max-width: 425px;
-  margin: 30px auto;
+  max-width: 100%;
+  margin: 0 auto;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 0;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  min-height: 100vh;
 }
 
 .container span {
@@ -30,37 +28,27 @@ body {
 
 .search-form {
   display: flex;
+  justify-content: center; /* centers it horizontally */
   align-items: center;
   gap: 10px;
-  margin-bottom: 40px;
-  position: relative;
-}
-
-.search-form span {
-  position: absolute;
-  padding: 10px;
+  margin: 40px auto; /* gives space from top and centers inside container */
+  width: 100%;
+  max-width: 600px; /* controls how wide it can get on large screens */
 }
 
 .search-form input {
-  border-radius: 20px;
-  padding: 30px;
-  width: 320px;
-  height: 20px;
+  flex: 1; /* makes it expand to fill space */
+  border-radius: 25px;
+  padding: 15px 20px;
+  border: 2px solid blue;
+  font-size: 18px;
   outline: none;
-  border-color: blue;
-  font-size: 20px;
+  width: 100%;
 }
 
-.search-input:focus {
+.search-form input:focus {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  width: 400px;
-}
-
-.search-form input::placeholder {
-  font-size: 20px;
-  padding: 10px;
-  font-weight: bold;
 }
 
 .location-button {
@@ -73,9 +61,6 @@ body {
   border-radius: 50%;
 }
 
-.location-button span {
-  position: relative;
-}
 .location-button:hover {
   background-color: rgba(51, 125, 254, 0.833);
   color: white;
@@ -83,6 +68,9 @@ body {
   transition: 0.3s;
 }
 
+.location-button span {
+  position: relative;
+}
 .current-weather {
   display: flex;
   flex-direction: column;
