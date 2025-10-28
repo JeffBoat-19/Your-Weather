@@ -136,8 +136,8 @@ body {
 }
 
 @media (max-width: 768px) {
-  .container {
-    justify-content: space-around;
+  .current-weather {
+    margin-top: 60px;
   }
   .weather-temperature {
     font-size: 45px;
@@ -155,25 +155,22 @@ body {
 }
 
 @media (max-width: 480px) {
-  .container {
-    justify-content: space-around;
-  }
-  .weather-temperature {
-    font-size: 35px;
-  }
+}
+.weather-temperature {
+  font-size: 35px;
+}
 
-  .weather-icon {
-    width: 100px;
-    height: 100px;
-  }
+.weather-icon {
+  width: 100px;
+  height: 100px;
+}
 
-  .weather-city {
-    font-size: 1.1rem;
-  }
+.weather-city {
+  font-size: 1.1rem;
+}
 
-  .weather-description {
-    font-size: 1rem;
-  }
+.weather-description {
+  font-size: 1rem;
 }
 
 .current-weather {
