@@ -19,6 +19,8 @@ const CurrentWeather = ({ weather, unit, onToggleUnit }) => {
       </p>
 
       <div className="weather-details">
+        <p>🔆 UV Index: {weather.current.uv}</p>
+        <p>🌡️ Feels like: {weather.current.feelslike_c}°C</p>
         <p>💧 Humidity: {weather.current.humidity}%</p>
         <p>🌬️ Wind: {weather.current.wind_kph} km/h</p>
       </div>
