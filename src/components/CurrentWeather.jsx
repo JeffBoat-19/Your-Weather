@@ -21,7 +21,6 @@ const CurrentWeather = ({ weather, unit, onToggleUnit }) => {
       <div className="weather-details">
         <p>💧 Humidity: {weather.current.humidity}%</p>
         <p>🌬️ Wind: {weather.current.wind_kph} km/h</p>
-        <p>🕓 Updated: {weather.current.last_updated}</p>
       </div>
 
       <button className="unit-toggle" onClick={onToggleUnit}>
