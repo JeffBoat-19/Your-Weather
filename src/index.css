@@ -4,9 +4,10 @@
   margin: 0;
 }
 
-html,body {
+html,
+body {
   height: 100%;
-  overflow: hidden
+  overflow: hidden;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: url("/icons/sky.jpg") no-repeat center center/cover;
   margin: 0;
