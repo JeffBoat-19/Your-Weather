@@ -6,13 +6,14 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: rgba(51, 125, 254, 0.833);
+  background: url("/icons/sky.jpg") no-repeat center center/cover;
   margin: 0;
   padding: 0;
 }
 
 .container {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.15); /* transparent white */
+  backdrop-filter: blur(10px);
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
