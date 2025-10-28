@@ -1,11 +1,22 @@
-import React from "react";
+import { useState } from "react";
 
-const SearchBar = () => {
+const SearchBar = ({ onSearch }) => {
+  const [input, setInput] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (input.trim() !== "") onSearch(input);
+  };
+
   return (
-    <form action="#" className="search-form">
-      <span className="material-symbols-rounded">search</span>
-      <input type="text" placeholder="Enter a city name" required />
-      <button className="location-button">
+    <form className="search-form" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        placeholder="Enter a city name"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+      />
+      <button className="location-button" type="submit">
         <span className="material-symbols-rounded">my_location</span>
       </button>
     </form>
