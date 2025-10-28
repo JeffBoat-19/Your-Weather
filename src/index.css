@@ -28,7 +28,6 @@ body {
   min-height: 100vh;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
 .search-form {
   display: flex;
   justify-content: center;
@@ -137,6 +136,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  .container {
+    justify-content: space-around;
+  }
   .weather-temperature {
     font-size: 45px;
   }
