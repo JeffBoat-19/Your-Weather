@@ -155,6 +155,9 @@ body {
 }
 
 @media (max-width: 480px) {
+  .container {
+    justify-content: space-around;
+  }
   .weather-temperature {
     font-size: 35px;
   }
