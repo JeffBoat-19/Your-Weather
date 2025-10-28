@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ onSearch, onLocationClick }) => {
   const [input, setInput] = useState("");
 
   const handleSubmit = (e) => {
@@ -15,8 +15,13 @@ const SearchBar = ({ onSearch }) => {
         placeholder="Enter a city name"
         value={input}
         onChange={(e) => setInput(e.target.value)}
+        required
       />
-      <button className="location-button" type="submit">
+      <button
+        type="button"
+        className="location-button"
+        onClick={onLocationClick}
+      >
         <span className="material-symbols-rounded">my_location</span>
       </button>
     </form>
