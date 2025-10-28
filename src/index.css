@@ -28,13 +28,12 @@ body {
 /* Search Form */
 .search-form {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* center the form horizontally */
   align-items: center;
-  gap: 10px;
+  gap: 10px; /* space between input and button */
   margin: 40px auto;
   width: 100%;
   max-width: 600px;
-  padding: 0 10px; /* extra padding for small screens */
 }
 
 .search-form input {
@@ -44,12 +43,14 @@ body {
   border: 2px solid blue;
   font-size: 18px;
   outline: none;
-  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 400px;
 }
 
+.search-form input:hover,
 .search-form input:focus {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: box-shadow 0.3s;
+  transform: scale(1.05); /* slightly bigger */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
 }
 
 .location-button {
@@ -61,6 +62,7 @@ body {
   border: 1px solid black;
   border-radius: 50%;
   transition: background-color 0.3s, color 0.3s, border 0.3s;
+  flex-shrink: 0; /* prevent shrinking when input scales */
 }
 
 .location-button:hover {
