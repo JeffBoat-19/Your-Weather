@@ -9,6 +9,20 @@ const App = () => {
 
   const apiKey = "6314cccfd789441b846201422250110";
 
+  const handleLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          fetchWeather(`${latitude},${longitude}`);
+        },
+        () => setError("Unable to get your location")
+      );
+    } else {
+      setError("Geolocation not supported by your browser");
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (city.trim() !== "") {
@@ -50,7 +64,7 @@ const App = () => {
           onChange={(e) => setCity(e.target.value)}
           required
         />
-        <button className="location-button" type="submit">
+        <button className="location-button" onClick={handleLocation}>
           <span className="material-symbols-rounded">my_location</span>
         </button>
       </form>
