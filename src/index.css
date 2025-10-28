@@ -4,7 +4,9 @@
   margin: 0;
 }
 
-body {
+html,body {
+  height: 100%;
+  overflow: hidden
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: url("/icons/sky.jpg") no-repeat center center/cover;
   margin: 0;
@@ -15,6 +17,8 @@ body {
   background-color: rgba(255, 255, 255, 0.15); /* transparent white */
   backdrop-filter: blur(10px);
   max-width: 1000px;
+  min-height: 100vh;
+  overflow: hidden;
   margin: 0 auto;
   padding: 20px;
   border-radius: 10px;
